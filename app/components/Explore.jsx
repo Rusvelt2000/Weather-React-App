@@ -3,7 +3,9 @@ var React = require('react');
 
 var Explore = (props) => {
   return (
-    <h3>Explore Forecast</h3>
+    <div>
+      <h3>Explore Forecasts</h3>
+    </div>
   );
 }
 
