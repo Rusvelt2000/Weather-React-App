@@ -19,6 +19,15 @@ var Explore = (props) => {
         <li className='text-left'>
           <Link to='/?location=Perth'>Perth, WA</Link>
         </li>
+        <li className='text-left'>
+          <Link to='/?location=New York'>New yourk, USA</Link>
+        </li>
+        <li className='text-left'>
+          <Link to='/?location=London'>London, UK</Link>
+        </li>
+        <li className='text-left'>
+          <Link to='/?location=Tokyo'>Tokyo, Japan</Link>
+        </li>
       </ol>
     </div>
   );
