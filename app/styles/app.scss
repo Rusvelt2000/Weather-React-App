@@ -1,6 +1,7 @@
+$space-large: 50px;
 
 .main-title {
-  margin: 50px auto;
+  margin: $space-large auto;
 }
 
 input[type=search] {
