@@ -1,23 +1,24 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
+var ReactDOMServer = require('react-dom/server');
 
 var ModalError = React.createClass({
-  componentDidMount: function() {
-    var modal = new Foundation.Reveal($('#error-modal'));
-    modal.open();
-  },
+
+
   getDefaultProps: function() {
     return {
-      title: 'City not found'
-    };
+      title: 'City not found',
+      message: 'Try out a new search'
+    }
   },
   propTypes: {
     title : React.PropTypes.string,
     message : React.PropTypes.string.isRequired
   },
-  render: function() {
+  componentDidMount: function() {
     var {title, message} = this.props;
 
-    return (
+    var modalMarkup = (
       <div className="reveal text-center tiny" id="error-modal" data-reveal=''>
         <h2>{title}</h2>
         <p>{message}</p>
@@ -26,6 +27,22 @@ var ModalError = React.createClass({
         </button>
       </div>
     );
+
+
+    var $modal = $(ReactDOMServer.renderToString(modalMarkup));
+    $(ReactDOM.findDOMNode(this)).html($modal);
+
+    var modal = new Foundation.Reveal($('#error-modal'));
+    modal.open();
+  },
+
+render: function() {
+    return (
+      <div>
+      </div>
+    );
+
+
   }
 });
 
