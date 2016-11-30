@@ -1,0 +1,12 @@
+
+.main-title {
+  margin: 50px auto;
+}
+
+input[type=search] {
+  border-radius: 5px;
+}
+
+.button {
+  border-radius: 5px;
+}

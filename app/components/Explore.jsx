@@ -4,7 +4,7 @@ var {Link} = require('react-router');
 var Explore = (props) => {
   return (
     <div>
-      <h1>Explore</h1>
+      <h1 className='main-title'>Explore</h1>
       <p>Here you can explore anything you'd ever wish to explore in your whole life, get your luggages on and enjoy the trip!</p>
       <ol>
         <li className='text-left'>
